@@ -39,6 +39,11 @@ public class MongoDBSpringBootApp implements CommandLineRunner {
 		for ( Person person: personList ) {
 			System.out.println( person );
 		}
+		
+		Iterable<Address> addressesNepal = addressRepo.findByTheCountry( "Nepal" );
+		for ( Address address: addressesNepal ) {
+			System.out.println( address );
+		}
 
 	}
 
