@@ -12,17 +12,19 @@ import lombok.Data;
 
 @Document( collection = "person" )
 @Data
-public class Person {
+public class Person extends AbstractEntity {
+
+	private static final long	serialVersionUID	= 8622050086330182038L;
 
 	@Id
-	private String			id;
+	private String				id;
 
-	private String			name;
+	private String				name;
 
-	private int				age;
+	private int					age;
 
 	@DBRef( db = "address" )
-	private List< Address >	addresses	= new ArrayList<>( );
+	private List< Address >		addresses			= new ArrayList<>( );
 
 	public Person( ) {
 	}

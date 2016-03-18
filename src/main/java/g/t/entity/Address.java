@@ -8,18 +8,20 @@ import lombok.Data;
 
 @Document( collection = "address" )
 @Data
-public class Address {
+public class Address extends AbstractEntity {
+
+	private static final long	serialVersionUID	= 4762914052932233503L;
 
 	@Id
-	private String	id;
+	private String				id;
 
-	private String	street;
+	private String				street;
 
-	private String	city;
+	private String				city;
 
-	private String	country;
+	private String				country;
 
-	private int		zipcode;
+	private int					zipcode;
 
 	public Address( ) {
 	}
