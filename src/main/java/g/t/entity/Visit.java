@@ -1,6 +1,6 @@
 package g.t.entity;
 
-import java.time.ZonedDateTime;
+import java.util.Date;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
@@ -17,6 +17,6 @@ public class Visit extends AbstractSoftEntity {
 	private String				city;
 
 	@Field( "visit_date" )
-	private ZonedDateTime		visitDate;
+	private Date		visitDate;
 
 }

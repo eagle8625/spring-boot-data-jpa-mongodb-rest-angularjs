@@ -1,7 +1,7 @@
 package g.t.entity;
 
 import java.io.Serializable;
-import java.time.ZonedDateTime;
+import java.util.Date;
 
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
@@ -26,7 +26,7 @@ public abstract class AbstractEntity implements Serializable {
 	@CreatedDate
 	@Field( "created_date" )
 	@JsonIgnore
-	private ZonedDateTime		createdDate			= ZonedDateTime.now( );
+	private Date				createdDate			= new Date( );
 
 	@LastModifiedBy
 	@Field( "last_modified_by" )
@@ -36,6 +36,6 @@ public abstract class AbstractEntity implements Serializable {
 	@LastModifiedDate
 	@Field( "last_modified_date  " )
 	@JsonIgnore
-	private ZonedDateTime		lastModifiedDate	= ZonedDateTime.now( );
+	private Date				lastModifiedDate	= new Date( );
 
 }
